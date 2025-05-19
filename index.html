@@ -21,37 +21,37 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Rowelle</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite movie?
+        🎥 What is my favorite play?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="play1">job</option>
+          <option value="play2">the effect</option>
+          <option value="play3">the seagull</option>
+          <option value="play4"> till the stars come down</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check play Answer</button>
     </form>
     <div id="movie-result"></div>
     <hr />
     <!-- Book Question -->
-    <form id="book-form">
+    <form id="song-form">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        🎧What is my favorite song?
+        <select id="song-answer">
+          <option value="song1">For island fires and family- by Dermot Kennedy</option>
+          <option value="song2">opening up- from the waitress</option>
+          <option value="song3">pushing it down down and praying- lizzy mcalpine</option>
+          <option value="song4">maine-by noah kahan</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check song Answer</button>
     </form>
-    <div id="book-result"></div>
+    <div id="song-result"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       //Movie Question jQuery Code
@@ -64,21 +64,21 @@ Select ONE Additional Feature to Add
         if (answer === "movie1") {
           $("#movie-result").text("YESSSS!");
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#movie-result").text("The seagull!");
         }
       });
 
       //Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      $("#song-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#song-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+        if (answer === "song 1") {
+          $("#song-result").text("pushing it down down and praying- lizzy mcalpine");
         } else {
-          $("#book-result").text("Try Again!");
+          $("#song-result").text("pushing it down down and praying- lizzy mcalpine");
         }
       });
     </script>
